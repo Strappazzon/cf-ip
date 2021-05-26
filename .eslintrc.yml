@@ -1,0 +1,55 @@
+---
+root: true
+
+env:
+  browser: true
+  es2021: true
+
+extends: eslint:recommended
+
+parserOptions:
+  ecmaVersion: 12
+  sourceType: module
+
+rules:
+  array-bracket-newline:
+    - error
+    - multiline: true
+      minItems: 2
+  camelcase:
+    - error
+  curly:
+    - error
+  default-case-last:
+    - error
+  eol-last:
+    - error
+    - always
+  indent:
+    - error
+    - tab
+  new-cap:
+    - error
+  no-multi-spaces:
+    - error
+  no-multiple-empty-lines:
+    - error
+    - max: 1
+      maxBOF: 0
+      maxEOF: 1
+  no-trailing-spaces:
+    - error
+  no-useless-return:
+    - error
+  quotes:
+    - error
+    - single
+    - allowTemplateLiterals: true
+  semi:
+    - error
+    - always
+  sort-vars:
+    - warn
+    - ignoreCase: true
+  vars-on-top:
+    - error

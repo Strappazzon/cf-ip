@@ -1,0 +1,21 @@
+name: Deploy Cloudflare Worker
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: curl
+        uses: wei/curl@v1.1.1
+        env:
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+          CF_ACCOUNT_EMAIL: ${{ secrets.CF_ACCOUNT_EMAIL }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        with:
+          args: -X PUT "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID/workers/scripts/ip" -H "X-Auth-Email:$CF_ACCOUNT_EMAIL" -H "X-Auth-Key:$CF_API_KEY" -H "Content-Type:application/javascript" --data-binary "@src/ip.js"

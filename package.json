@@ -1,0 +1,34 @@
+{
+	"private": true,
+	"name": "cf-ip",
+	"description": "Returns the user's IP address in plaintext.",
+	"keywords": [
+		"ip",
+		"my ip"
+	],
+	"version": "0.0",
+	"author": {
+		"name": "Alberto Strappazzon",
+		"url": "https://www.strappazzon.xyz"
+	},
+	"license": "MIT",
+	"homepage": "https://ip.strappazzon.xyz",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Strappazzon/cf-ip"
+	},
+	"bugs": {
+		"url": "https://github.com/Strappazzon/cf-ip/issues"
+	},
+	"main": "ip.js",
+	"scripts": {
+		"start": "cloudworker src/ip.js",
+		"test": "wrangler dev",
+		"publish": "wrangler publish --env production"
+	},
+	"devDependencies": {
+		"@cloudflare/wrangler": "^1.16.1",
+		"@dollarshaveclub/cloudworker": "^0.1.2",
+		"eslint": "^7.25.0"
+	}
+}

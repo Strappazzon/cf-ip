@@ -1,0 +1,7 @@
+# NodeJS
+**/node_modules/
+
+# Wrangler
+**/dist/
+**/worker/
+wrangler.toml
