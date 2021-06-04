@@ -6,17 +6,27 @@ Get your IP address in plaintext. Powered by [Cloudflare Workers](https://worker
 
 ## Usage
 
-On Linux and [WSL](https://docs.microsoft.com/en-us/windows/wsl/about):
+<table>
+<tr>
+<td> On Linux and <a href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL</a> </td> <td> On Windows </td>
+</tr>
+<tr>
+<td>
 
 ```bash
 curl ip.strappazzon.xyz
 ```
 
-On Windows:
-
+</td>
+<td>
+    
 ```ps1
 Invoke-WebRequest 'ip.strappazzon.xyz' | Select-Object -Expand Content
 ```
+  
+</td>
+</tr>
+</table>
 
 ## Deploy
 
