@@ -8,22 +8,22 @@ Get your IP address in plaintext. Powered by [Cloudflare Workers](https://worker
 
 <table>
 <tr>
-<td> On Linux and <a href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL</a> </td> <td> On Windows </td>
+<td>On Linux and <a href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL</a></td> <td>On Windows</td>
 </tr>
 <tr>
 <td>
 
 ```bash
-curl ip.strappazzon.xyz
+curl ip.strappazzon.workers.dev
 ```
 
 </td>
 <td>
-    
+
 ```ps1
-Invoke-WebRequest 'ip.strappazzon.xyz' | Select-Object -Expand Content
+Invoke-WebRequest 'ip.strappazzon.workers.dev' | Select-Object -Expand Content
 ```
-  
+
 </td>
 </tr>
 </table>

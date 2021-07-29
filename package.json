@@ -12,7 +12,7 @@
 		"url": "https://www.strappazzon.xyz"
 	},
 	"license": "MIT",
-	"homepage": "https://ip.strappazzon.xyz",
+	"homepage": "https://ip.strappazzon.workers.dev/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/Strappazzon/cf-ip"
